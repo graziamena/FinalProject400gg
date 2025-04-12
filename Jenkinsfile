@@ -21,10 +21,10 @@ pipeline {
     // build the war file (the binary).  This is the only
     // place that happens.
     stage('Build') {
-      environment {
+      //environment {
         // Override JAVA_HOME to use JDK 11 for this stage
-        JAVA_HOME = '/usr/lib/jvm/java-11-openjdk'
-        PATH = "${JAVA_HOME}/bin:${PATH}"
+        //JAVA_HOME = '/usr/lib/jvm/java-11-openjdk'
+        //PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
         sh './gradlew build'
