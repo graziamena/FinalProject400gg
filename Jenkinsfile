@@ -27,7 +27,8 @@ pipeline {
         PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
-        sh 'docker build -t ensf400project1 .'
+        sh './gradlew build'
+        //sh 'docker build -t ensf400project1 .'
       }
     }
     // run all the unit tests - these do not require anything else
